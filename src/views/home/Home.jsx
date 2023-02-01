@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import Navbar from "../../components/navbar/Navbar";
 import SectionHome from "../../components/sectionHome/SectionHome";
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -126,12 +125,10 @@ const Home = () => {
 
    return (
       <ReactFullpage
-         // licenseKey={"YOUR_KEY_HERE"}
          scrollingSpeed={1000}
          render={({ state, fullpageApi }) => {
             return (
                <>
-                  <Navbar />
                   <ReactFullpage.Wrapper>
                      <div className="section">
                         <div id="home">
