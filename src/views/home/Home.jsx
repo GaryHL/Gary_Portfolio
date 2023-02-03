@@ -1,9 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import SectionHome from "../../components/sectionHome/SectionHome";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Home = () => {
+   let { page } = useParams();
+
+   const [pageInit, setPageInit] = useState(null);
+
+
+
+   useEffect(() => {
+         setPageInit(page);
+   }, [page]);
 
    const navigate = useNavigate();
    //estados iniciales de cada vista
@@ -107,7 +116,7 @@ const Home = () => {
       subtitle: "This is a subtitle",
       ctaText: "click me",
       cta: () => {
-         alert("You clicked");
+         navigate("/about");
       },
       picture:
          "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
@@ -130,10 +139,18 @@ const Home = () => {
       <ReactFullpage
          scrollingSpeed={1000}
          render={({ state, fullpageApi }) => {
+            if (pageInit === "contact") {
+               fullpageApi.moveSectionDown();
+               fullpageApi.moveSectionDown();
+               fullpageApi.moveSectionDown();
+               setPageInit("listo");
+               console.log(pageInit)
+            }
+
             return (
                <>
                   <ReactFullpage.Wrapper>
-                     <div className="section">
+                     <div className="section" id="#sectionhome">
                         <div id="home">
                            <SectionHome
                               active={section1}
@@ -186,7 +203,7 @@ const Home = () => {
                            </SectionHome>
                         </div>
                      </div>
-                     <div className="section">
+                     <div className="section" id="contacto">
                         <div id="contact">
                            <SectionHome
                               active={section4}
@@ -202,6 +219,9 @@ const Home = () => {
                                  id="#contact"
                               ></div>
                            </SectionHome>
+                           {/* <button onClick={() => fullpageApi.moveSectionUp()}>
+                              Move up
+                           </button> */}
                         </div>
                      </div>
                   </ReactFullpage.Wrapper>
