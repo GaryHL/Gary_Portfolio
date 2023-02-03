@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledNav, ContainerMenu, StyledOptions } from "./styledNavbar";
+import { StyledNav, ContainerMenu, StyledOptions, LinkToHome } from "./styledNavbar";
 import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
             }
          />
          <StyledNav openMenu={openMenu}>
-            <h3>Gary Lima</h3>
+            <LinkToHome to="home">Gary Lima</LinkToHome>
             <StyledOptions>
                <AiFillGithub />
                <AiFillLinkedin />
