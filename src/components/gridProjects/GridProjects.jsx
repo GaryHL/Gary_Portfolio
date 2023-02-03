@@ -7,6 +7,7 @@ import {
 } from "./StyledGridProjects";
 import { AnimatePresence } from "framer-motion";
 import CardProject from "../cardProject/CardProject";
+import Footer from "../footer/Footer";
 
 const GridProjects = () => {
    const [array, setArray] = useState([
@@ -93,6 +94,7 @@ const GridProjects = () => {
                   })}
                </AnimatePresence>
             </ContainerProjects>
+            <Footer style={{position:"absolute", bottom:"0"}}></Footer>
          </ContainerGridProjects>
       </>
    );
