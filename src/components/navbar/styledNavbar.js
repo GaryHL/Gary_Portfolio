@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const StyledNav = styled.nav`
    width: 90%;
@@ -12,15 +13,18 @@ export const StyledNav = styled.nav`
    z-index: 100;
    transition: 0.5s;
    color: ${(props) => (props.openMenu ? "#e9e9e9" : "black")};
-   user-select:none;
-   > h3 {
-      font-size: 1.5rem;
-      cursor:pointer;
+   user-select: none;
+`;
+
+export const LinkToHome = styled(Link)`
+   font-size: 1.5rem;
+   cursor: pointer;
+   transition: transform 0.3s ease-in-out;
+   text-decoration:none;
+   color:black;
+   &:hover {
+      transform: scale(1.1);
       transition: transform 0.3s ease-in-out;
-      &:hover {
-         transform: scale(1.1);
-         transition: transform 0.3s ease-in-out;
-      }
    }
 `;
 
