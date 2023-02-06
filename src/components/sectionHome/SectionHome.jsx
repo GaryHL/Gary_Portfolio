@@ -13,11 +13,11 @@ import {
    ContainerImage,
 } from "./styledSectionHome";
 
-const SectionHome = ({ active, withButton, children, dataSection }) => {
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse}) => {
    //Data test
 
    return (
-      <StyledSection>
+      <StyledSection rowReverse={rowReverse}>
          <StyledInfo>
             <StyledTitle
                initial={{ x: "-100%" }}

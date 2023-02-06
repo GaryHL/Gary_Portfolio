@@ -7,6 +7,7 @@ background-color:#e9e9e9;
    height: 100vh;
    padding: 0 5%;
    display: flex;
+   ${props => props.rowReverse? "flex-direction:row-reverse;" : "flex-direction:row;"}
    align-items:center;
    position:relative;
    overflow: scroll;

@@ -170,6 +170,7 @@ const Home = () => {
                      <div className="section">
                         <div id="projects">
                            <SectionHome
+                              rowReverse={true}
                               active={section2}
                               dataSection={dataProjects}
                               withButton={true}
