@@ -49,6 +49,9 @@ const GlobalStyles = createGlobalStyle`
   .fp-watermark{
     display:none;
   }
+  body{
+    background-color:#e9e9e9;
+}
 `;
 
 const ResetCSS = () => (
