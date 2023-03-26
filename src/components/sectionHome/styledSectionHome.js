@@ -10,12 +10,10 @@ background-color:#e9e9e9;
    ${props => props.rowReverse? "flex-direction:row-reverse;" : "flex-direction:row;"}
    align-items:center;
    position:relative;
-   overflow: scroll;
-   overflow:hidden;
    @media (max-width: 900px) {
       flex-direction:column-reverse;
       height:90vh;
-      padding-top:10vh;
+      /* padding-top:10vh; */
    }
 `;
 
