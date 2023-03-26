@@ -222,8 +222,6 @@ const AboutMe = () => {
                                  animate={skills}
                               />
                            </StyledGridSkills>
-                           <br></br>
-                           <br></br>
                            <Footer />
                         </ContainerAboutMe>
                      </div>
