@@ -14,7 +14,7 @@ export const StyledTitle = styled(motion.h1)`
   height: 3.2rem;
   @media (max-width: 900px) {
     grid-template-columns: 100%;
-    font-size: 2.9rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -42,7 +42,7 @@ export const StyledContainerInfo = styled(motion.div)`
       padding-top: 2rem;
 
       > p {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
