@@ -12,7 +12,7 @@ background-color:#e9e9e9;
    @media (max-width: 900px) {
       flex-direction:column-reverse;
       height:90vh;
-      padding-top:10vh;
+      /* padding-top:10vh; */
    }
 `;
 
