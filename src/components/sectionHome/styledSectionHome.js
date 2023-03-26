@@ -11,6 +11,8 @@ background-color:#e9e9e9;
    position:relative;
    @media (max-width: 900px) {
       flex-direction:column-reverse;
+      height:90vh;
+      /* padding-top:10vh; */
    }
 `;
 
