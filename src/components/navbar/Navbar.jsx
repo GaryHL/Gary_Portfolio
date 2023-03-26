@@ -15,7 +15,7 @@ const Navbar = () => {
             }
          />
          <StyledNav openMenu={openMenu}>
-            <LinkToHome to="home">Gary Lima</LinkToHome>
+            <LinkToHome to="home">Gary</LinkToHome>
             <StyledOptions>
                <AiFillGithub />
                <AiFillLinkedin />
