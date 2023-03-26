@@ -11,15 +11,15 @@ background-color:#e9e9e9;
    position:relative;
    @media (max-width: 900px) {
       flex-direction:column-reverse;
-      height:90vh;
-      /* padding-top:10vh; */
+      height:80vh;
+      padding-top:10vh;
    }
 `;
 
 export const StyledTitle = styled(motion.h2)`
    font-size: 6rem;
    @media (max-width: 900px) {
-      font-size: 3.5rem;
+      font-size: 3rem;
    }
 `;
 
