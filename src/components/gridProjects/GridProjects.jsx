@@ -8,30 +8,45 @@ import {
 import { AnimatePresence } from "framer-motion";
 import CardProject from "../cardProject/CardProject";
 import Footer from "../footer/Footer";
+import imgYoutube from '../../assets/youtube-logo.png'
+import rarebooks from '../../assets/rarebooks.png'
+import movieapp from '../../assets/movieapp.png'
+import portfolio from '../../assets/portfolio.png'
 
 const GridProjects = () => {
    const [array, setArray] = useState([
-      {"title":"Check App",
-      "image_path":"https://imgs.search.brave.com/08Hzi9HtAd_tm2qDhW7mEfDTApajBx5fL-PkBUxVeds/rs:fit:639:1136:1/g:ce/aHR0cDovL2ljbGFy/aWZpZWQuY29tL2lt/YWdlcy9uZXdzLzQ2/ODA0LzIxNTcxMy8y/MTU3MTMuanBn",
-      "link":"https://chat.openai.com/chat/b9ba41dc-62ad-4727-a147-9f49f90469ff",
-      "description":"esta es una App muy bonita",
-      "link_repository":"https://github.com",
-      "type":"fullstack"
-   },
-   {"title":"Vercel",
-      "image_path":"https://mouredev.com/wp-content/uploads/2018/11/factorlink.jpg",
-      "link":"https://chat.openai.com/chat/b9ba41dc-62ad-4727-a147-9f49f90469ff",
-      "description":"esta es una App muy bonita",
-      "link_repository":"https://github.com",
-      "type":"fullstack"
-   },
-   {"title":"Check",
-      "image_path":"https://mouredev.com/wp-content/uploads/2018/11/factorlink.jpg",
-      "link":"https://chat.openai.com/chat/b9ba41dc-62ad-4727-a147-9f49f90469ff",
-      "description":"esta es una App muy bonita",
-      "link_repository":"https://github.com",
-      "type":"frontEnd"
-   }
+      {
+         "title": "Youtube Clone",
+         "image_path": imgYoutube,
+         "link": "https://youtube-clone-garyhl.vercel.app/",
+         "description": "Un clon funcional de Youtube consumiendo una api",
+         "link_repository": "https://github.com/GaryHL/Youtube-Clone.git",
+         "type": "frontEnd"
+      },
+      {
+         "title": "RareBooks",
+         "image_path": rarebooks,
+         "link": "https://github.com/GaryHL/front-end-hackathon-f5.git",
+         "description": "Marketplace de libros exclusivos y proyecto ganador de la Hackathon F5 mentorizado por Caixa Bank Tech.",
+         "link_repository": "https://github.com/GaryHL/front-end-hackathon-f5.git",
+         "type": "fullstack"
+      },
+      {
+         "title": "Movie App",
+         "image_path": movieapp,
+         "link": "https://appmoviemdb.vercel.app/",
+         "description": "Aplicación consumiendo una API pública, tiene la funcionalidad de filtrado.",
+         "link_repository": "https://github.com/GaryHL/MovieAppMDB.git",
+         "type": "frontEnd"
+      },
+      {
+         "title": "Portfolio",
+         "image_path": portfolio,
+         "link": "https://gary-portfolio.vercel.app/",
+         "description": "Mi portfolio personal, contiene información sobre mí y mis proyectos.",
+         "link_repository": "https://github.com/GaryHL/Gary_Portfolio.git",
+         "type": "frontEnd"
+      }
    ]);
    const [filterProject, setFilterProject] = useState("fullStack");
 
@@ -41,7 +56,6 @@ const GridProjects = () => {
       } else {
          setFiltered(array.filter((item) => item.type.toLowerCase() === filterProject.toLowerCase()));
       }
-      console.log(filterProject);
    }, [filterProject]);
 
    const [filtered, setFiltered] = useState([]);
@@ -53,19 +67,19 @@ const GridProjects = () => {
                <StyledTab
                   style={
                      filterProject === "all"
-                        ? { backgroundColor: "#222", color: "#e9e9e9" ,transition:"0.3s ease-in-out" }
+                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
                         : { backgroundColor: "#e9e9e9" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setFilterProject("all")}
                >
-                  All
+                  Todos
                </StyledTab>
                <StyledTab
                   style={
                      filterProject === "frontEnd"
-                        ? { backgroundColor: "#222", color: "#e9e9e9" ,transition:"0.3s ease-in-out" }
+                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
                         : { backgroundColor: "#e9e9e9" }
                   }
                   whileHover={{ scale: 1.02 }}
@@ -77,7 +91,7 @@ const GridProjects = () => {
                <StyledTab
                   style={
                      filterProject === "fullStack"
-                        ? { backgroundColor: "#222", color: "#e9e9e9" ,transition:"0.3s ease-in-out" }
+                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
                         : { backgroundColor: "#e9e9e9" }
                   }
                   whileHover={{ scale: 1.02 }}
@@ -94,7 +108,7 @@ const GridProjects = () => {
                   })}
                </AnimatePresence>
             </ContainerProjects>
-            <Footer style={{position:"absolute", bottom:"0"}}></Footer>
+            <Footer style={{ position: "absolute", bottom: "0" }}></Footer>
          </ContainerGridProjects>
       </>
    );

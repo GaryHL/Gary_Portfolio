@@ -67,8 +67,9 @@ export const ContianerLinksMenu = styled(motion.div)`
    display: flex;
    flex-direction: column;
    gap: 2rem;
+   align-items: center;
    > span{
-      height: 3rem;
+      height: 2.5rem;
       cursor: pointer;
       overflow: scroll;
       overflow: hidden;
