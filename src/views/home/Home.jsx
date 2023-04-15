@@ -3,7 +3,7 @@ import SectionHome from "../../components/sectionHome/SectionHome";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import homeCover from '../../assets/home-cover.png'
-import projectsCover from '../../assets/projects-cover.png'
+import projectsCover from '../../assets/Projects-cover.png'
 import aboutCover from '../../assets/about-cover.png'
 import contactCover from '../../assets/contact-cover.png'
 
