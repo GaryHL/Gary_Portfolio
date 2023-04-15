@@ -26,14 +26,15 @@ import {
    SytledImg,
 } from "../../components/sectionHome/styledSectionHome";
 import Footer from "../../components/footer/Footer";
+import aboutCover from '../../assets/About-cover.png'
 
 const AboutMe = () => {
    const dataProjects = {
       title: "Sobre mí",
-      subtitle: "Dejame que te cuente quién soy",
+      subtitle: "⬇ Desliza para abajo ⬇",
       ctaText: "Ver más",
       picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+         aboutCover,
       pictureName: "Image name",
    };
 
@@ -127,10 +128,9 @@ const AboutMe = () => {
                                  <p>
                                     Soy un desarrollador web fullstack junior,
                                     he completado dos bootcamps que me dieron ya
-                                    más de 1300 horas de practica y participado
-                                    en varios proyectos,<br></br> <br></br>
-                                    incluyendo dos hackathones en los cuales
-                                    llegué a ser finalista en ambos.<br></br>
+                                    más de 1300 horas de practica y permitiendome trabajar en muchos proyectos,<br></br> <br></br>
+                                    incluyendo tres hackathones de los cuales
+                                    llegué a ser finalista en dos de ellos y ganador en la hackathon f5.<br></br>
                                     <br></br> Mi pasión por la tecnología y el
                                     desarrollo web me motiva a estar en
                                     constante evolución y aprendizaje en esta

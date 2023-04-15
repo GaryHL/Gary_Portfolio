@@ -2,17 +2,19 @@ import React from "react";
 import SectionHome from "../../components/sectionHome/SectionHome";
 import ReactFullpage from "@fullpage/react-fullpage";
 import GridProjects from "../../components/gridProjects/GridProjects";
+import projectCover from '../../assets/Projects-cover.png'
+
 
 const Projects = () => {
    const dataProjects = {
       title: "Proyectos",
-      subtitle: "This is a subtitle",
+      subtitle: "⬇ Desliza para abajo ⬇",
       ctaText: "click me",
       cta: () => {
          alert("You clicked");
       },
       picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+         projectCover,
       pictureName: "Image name",
    };
 

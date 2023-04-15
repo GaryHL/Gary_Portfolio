@@ -12,9 +12,9 @@ import { StyledButton } from "../sectionHome/styledSectionHome";
 const CardProject = ({ project }) => {
    const [cardHover, setCardHover] = useState(false);
 
-   useEffect(() => {
-      console.log(cardHover);
-   }, [cardHover]);
+   const openWindow = (url) => {
+      window.open(url, '_blank');
+   };
 
    return (
       <StyledContainerCard
@@ -27,15 +27,18 @@ const CardProject = ({ project }) => {
          transition={{ duration: 0.3 }}
          exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
       >
-         <StyledImgCard src={project.image_path} />
+         <StyledImgCard src={project.image_path}
+            onClick={() => openWindow(project.link)}
+         />
          <StyledDetailsCard>
-            <h4>{project.title}</h4>
+            <h4 style={{fontSize:'1.2rem', fontWeight:'600'}}>{project.title}</h4>
             <p>{project.description}</p>
             <StyledCardButtons>
                <ButtonCard
                   to=""
                   whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={() => openWindow(project.link_repository)}
                >
                   Repositorio
                </ButtonCard>
@@ -43,6 +46,7 @@ const CardProject = ({ project }) => {
                   to=""
                   whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                   whileTap={{ scale: 0.98 }}
+                  onClick={() => openWindow(project.link)}
                >
                   Despliege
                </ButtonCard>
