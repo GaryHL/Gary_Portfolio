@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { BsXLg } from "react-icons/bs";
 import emailjs from "emailjs-com";
 import { ContainerForm, Form } from './StyledContactForm'
+import swal from "sweetalert";
 
-function ContactForm({formActive, setFormActive}) {
+function ContactForm({ formActive, setFormActive }) {
 
     const form = useRef();
 
@@ -20,6 +21,9 @@ function ContactForm({formActive, setFormActive}) {
             .then(
                 (result) => {
                     console.log(result.text);
+                    swal("Perfecto, tu mensaje se a enviado con éxito!", "Gracias por tu tiempo, te reponderé lo más pronto posible.", "success");
+
+                    setFormActive(!formActive)
                 },
                 (error) => {
                     console.log(error.text);
@@ -30,9 +34,11 @@ function ContactForm({formActive, setFormActive}) {
 
     return (
         <>
-            <ContainerForm animate={formActive? {opacity:1 , 
-            display:'flex'}: {opacity:0, display:'none'}
-        }>
+            <ContainerForm animate={formActive ? {
+                opacity: 1,
+                display: 'flex'
+            } : { opacity: 0, display: 'none' }
+            }>
                 <Form ref={form} onSubmit={sendEmail} className="container_form">
                     <h1>Contactame</h1>
                     <BsXLg onClick={() => setFormActive(!formActive)} className="closeButton" />
@@ -55,7 +61,7 @@ function ContactForm({formActive, setFormActive}) {
                         placeholder="Tu mensaje"
                         required
                     />
-                    <button type="submit" onClick={() => setFormActive(!formActive)}>Enviar</button>
+                    <button type="submit" >Enviar</button>
 
                 </Form>
 
