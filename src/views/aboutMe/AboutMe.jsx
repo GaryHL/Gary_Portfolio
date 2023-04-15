@@ -26,7 +26,7 @@ import {
    SytledImg,
 } from "../../components/sectionHome/styledSectionHome";
 import Footer from "../../components/footer/Footer";
-import aboutCover from '../../assets/About-cover.png'
+import aboutCover from '../../assets/about-cover.png'
 
 const AboutMe = () => {
    const dataProjects = {
