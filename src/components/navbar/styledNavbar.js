@@ -69,10 +69,10 @@ export const ContianerLinksMenu = styled(motion.div)`
    gap: 2rem;
    align-items: center;
    > span{
-      height: 2.5rem;
+      /* height: 2.5rem; */
       cursor: pointer;
-      overflow: scroll;
-      overflow: hidden;
+      /* overflow: scroll;
+      overflow: hidden; */
    }
 `
 
