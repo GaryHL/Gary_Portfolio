@@ -8,7 +8,7 @@ import aboutCover from '../../assets/about-cover.png'
 import contactCover from '../../assets/contact-cover.png'
 import ContactForm from "../../components/contactForm/ContactForm";
 
-const Home = ({setFormActive}) => {
+const Home = ({ setFormActive }) => {
    let { page } = useParams();
 
    const [pageInit, setPageInit] = useState(null);
@@ -16,7 +16,7 @@ const Home = ({setFormActive}) => {
 
 
    useEffect(() => {
-         setPageInit(page);
+      setPageInit(page);
    }, [page]);
 
    const navigate = useNavigate();
@@ -122,7 +122,7 @@ const Home = ({setFormActive}) => {
       cta: () => {
          navigate("/about");
       },
-      picture:aboutCover,
+      picture: aboutCover,
       pictureName: "Image name",
    };
 
@@ -132,7 +132,7 @@ const Home = ({setFormActive}) => {
       ctaText: "Contactame",
       cta: () => {
       },
-      picture:contactCover,
+      picture: contactCover,
       pictureName: "Image name",
    };
 
@@ -209,6 +209,7 @@ const Home = ({setFormActive}) => {
                      <div className="section" id="contacto">
                         <div id="contact">
                            <SectionHome
+                              rowReverse={true}
                               active={section4}
                               dataSection={dataContact}
                               withButton={true}
