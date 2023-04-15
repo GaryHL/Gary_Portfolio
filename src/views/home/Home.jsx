@@ -6,8 +6,9 @@ import homeCover from '../../assets/home-cover.png'
 import projectsCover from '../../assets/Projects-cover.png'
 import aboutCover from '../../assets/about-cover.png'
 import contactCover from '../../assets/contact-cover.png'
+import ContactForm from "../../components/contactForm/ContactForm";
 
-const Home = () => {
+const Home = ({setFormActive}) => {
    let { page } = useParams();
 
    const [pageInit, setPageInit] = useState(null);
@@ -130,11 +131,11 @@ const Home = () => {
       subtitle: "¿Quieres hablar conmigo?",
       ctaText: "Contactame",
       cta: () => {
-         alert("You clicked");
       },
       picture:contactCover,
       pictureName: "Image name",
    };
+
 
    return (
       <ReactFullpage
@@ -211,6 +212,7 @@ const Home = () => {
                               active={section4}
                               dataSection={dataContact}
                               withButton={true}
+                              setFormActive={setFormActive}
                            >
                               <div
                                  style={{
@@ -221,9 +223,6 @@ const Home = () => {
                                  id="#contact"
                               ></div>
                            </SectionHome>
-                           {/* <button onClick={() => fullpageApi.moveSectionUp()}>
-                              Move up
-                           </button> */}
                         </div>
                      </div>
                   </ReactFullpage.Wrapper>

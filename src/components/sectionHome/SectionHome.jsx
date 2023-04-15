@@ -13,7 +13,7 @@ import {
    ContainerImage,
 } from "./styledSectionHome";
 
-const SectionHome = ({ active, withButton, children, dataSection, rowReverse}) => {
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive}) => {
    //Data test
 
    return (
@@ -45,7 +45,7 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse}) =
             </StyledSubtitle>
             {withButton ? (
                <StyledButton
-                  onClick={dataSection.cta}
+                  onClick={setFormActive? () => setFormActive(true) :  dataSection.cta}
                   whileHover={{
                      scale: 1.03,
                      x: 5,
