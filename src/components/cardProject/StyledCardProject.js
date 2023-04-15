@@ -34,6 +34,7 @@ export const StyledImgCard = styled(motion.img)`
    aspect-ratio: 16/9;
    object-fit: cover;
    cursor:pointer;
+   border-bottom: 1px black solid ;
 `;
 
 export const StyledDetailsCard = styled(motion.span)`

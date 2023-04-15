@@ -2,6 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import SectionHome from "../../components/sectionHome/SectionHome";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import homeCover from '../../assets/home-cover.png'
+import projectsCover from '../../assets/projects-cover.png'
+import aboutCover from '../../assets/about-cover.png'
+import contactCover from '../../assets/contact-cover.png'
 
 const Home = () => {
    let { page } = useParams();
@@ -89,49 +93,46 @@ const Home = () => {
 
    const dataHome = {
       title: "Hola, soy Gary",
-      subtitle: "This is a subtitle",
+      subtitle: "Bienvenid@ a mi portfolio!",
       ctaText: "click me",
       cta: () => {
          alert("You clicked");
       },
       picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+         homeCover,
       pictureName: "Image name",
    };
 
    const dataProjects = {
       title: "Proyectos",
-      subtitle: "This is a subtitle",
-      ctaText: "click me",
+      subtitle: "Aquí puedes ver lo que soy capaz de hacer",
+      ctaText: "Ver proyectos",
       cta: () => {
          navigate("/projects");
       },
-      picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+      picture: projectsCover,
       pictureName: "Image name",
    };
 
    const dataAbout = {
       title: "Sobre mí",
-      subtitle: "This is a subtitle",
-      ctaText: "click me",
+      subtitle: "Dejame contarte un poco sobre mi ...",
+      ctaText: "Conoceme!",
       cta: () => {
          navigate("/about");
       },
-      picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+      picture:aboutCover,
       pictureName: "Image name",
    };
 
    const dataContact = {
       title: "Contacto",
-      subtitle: "This is a subtitle",
-      ctaText: "click me",
+      subtitle: "¿Quieres hablar conmigo?",
+      ctaText: "Contactame",
       cta: () => {
          alert("You clicked");
       },
-      picture:
-         "https://imgs.search.brave.com/tkMjyNJx9iq01utpQKcUnrnIrqOA5EosNJ16_wqCTYU/rs:fit:1024:410:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzEzLzFk/L2ZjLzEzMWRmYzg5/ZjMwYTllODRlOGJm/Njc2YTc1MzY1MTgw/LmpwZw",
+      picture:contactCover,
       pictureName: "Image name",
    };
 
