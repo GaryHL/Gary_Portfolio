@@ -27,6 +27,7 @@ import {
 } from "../../components/sectionHome/styledSectionHome";
 import Footer from "../../components/footer/Footer";
 import aboutCover from '../../assets/about-cover.png'
+import gary_profile from '../../assets/gary-image.jpeg'
 
 const AboutMe = () => {
    const dataProjects = {
@@ -120,8 +121,8 @@ const AboutMe = () => {
                                  ></StyledSpan>
 
                                  <SytledImg
-                                    style={{ aspectRatio: "16/9" }}
-                                    src="https://mouredev.com/wp-content/uploads/2018/11/proaqui.jpg"
+                                    style={{ aspectRatio: "16/9", width:'100%', opacity:0.5}}
+                                    src={gary_profile}
                                  />
                               </ContainerImage>
                               <div className="containerDetails">
