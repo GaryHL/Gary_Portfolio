@@ -13,8 +13,7 @@ import {
    ContainerImage,
 } from "./styledSectionHome";
 
-const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive}) => {
-   //Data test
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive }) => {
 
    return (
       <StyledSection rowReverse={rowReverse}>
@@ -45,7 +44,7 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
             </StyledSubtitle>
             {withButton ? (
                <StyledButton
-                  onClick={setFormActive? () => setFormActive(true) :  dataSection.cta}
+                  onClick={setFormActive ? () => setFormActive(true) : dataSection.cta}
                   whileHover={{
                      scale: 1.03,
                      x: 5,
@@ -64,17 +63,13 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
             ) : null}
          </StyledInfo>
          <StyledPicture
-            initial={{ x: 0, scale: 0.95 }}
-            transition={{ type: "tween", duration: 1.2 }}
-            animate={active ? { scale: 1, x: "-5%" } : { scale: 0.95 }}
          >
             <ContainerImage
-               initial={{ x: 0, scale: 0.95 }}
-               transition={{ type: "tween", duration: 1.2 }}
-               animate={active ? { scale: 1 } : { scale: 0.95 }}
+            // initial={{ x: 0, scale: 0.95 }}
+            // transition={{ type: "tween", duration: 1.2 }}
             >
                {children}
-               <StyledSpan
+               {/* <StyledSpan
                   style={{ backgroundColor: "#e9e9e9" }}
                   initial={{ x: 0 }}
                   transition={{ type: "tween", duration: 1.2 }}
@@ -85,12 +80,10 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
                   initial={{ x: 0 }}
                   transition={{ type: "tween", duration: 0.8 }}
                   animate={active ? { x: "100%" } : { x: 0 }}
-               ></StyledSpan>
-
-               <SytledImg
-                  src={dataSection.picture}
-                  alt={dataSection.pictureName}
-               />
+               ></StyledSpan> */}
+               <SytledImg>
+                  asasdfsdafas
+               </SytledImg>
             </ContainerImage>
          </StyledPicture>
       </StyledSection>
