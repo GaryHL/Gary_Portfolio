@@ -157,6 +157,7 @@ const Home = ({ setFormActive }) => {
                            <SectionHome
                               active={section1}
                               dataSection={dataHome}
+                              escene={"cube"}
                            >
                               <div
                                  style={{
@@ -176,6 +177,7 @@ const Home = ({ setFormActive }) => {
                               active={section2}
                               dataSection={dataProjects}
                               withButton={true}
+                              escene={"projects"}
                            >
                               <div
                                  style={{
@@ -194,6 +196,7 @@ const Home = ({ setFormActive }) => {
                               active={section3}
                               dataSection={dataAbout}
                               withButton={true}
+                              escene="about"
                            >
                               <div
                                  style={{
@@ -214,6 +217,8 @@ const Home = ({ setFormActive }) => {
                               dataSection={dataContact}
                               withButton={true}
                               setFormActive={setFormActive}
+                              escene="contact"
+
                            >
                               <div
                                  style={{

@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Spline from '@splinetool/react-spline';
+
 import { motion } from "framer-motion";
 import {
    StyledInfo,
@@ -13,7 +15,16 @@ import {
    ContainerImage,
 } from "./styledSectionHome";
 
-const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive }) => {
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, escene}) => {
+
+   const urlsSpline = {
+      cube: "https://prod.spline.design/OmmIgfZAP1CRCLhO/scene.splinecode",
+      projects:"https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode",
+      about:"https://prod.spline.design/H2hNRbSeoCNYpfhE/scene.splinecode",
+      contact:"https://prod.spline.design/x-BWFFjCHOkM69s7/scene.splinecode",
+   }
+
+   const esceneSpline = urlsSpline[escene];
 
    return (
       <StyledSection rowReverse={rowReverse}>
@@ -81,8 +92,9 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
                   transition={{ type: "tween", duration: 0.8 }}
                   animate={active ? { x: "100%" } : { x: 0 }}
                ></StyledSpan> */}
+
                <SytledImg>
-                  asasdfsdafas
+                  <Spline scene={esceneSpline} />
                </SytledImg>
             </ContainerImage>
          </StyledPicture>

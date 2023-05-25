@@ -90,7 +90,7 @@ export const ContainerImage = styled(motion.div)`
 export const SytledImg = styled(motion.div)`
 /* height: 100%; */
 aspect-ratio: 1/1;
-background-color: black;
+/* background-color: black; */
 
   @media (min-width: 900px) {
     width: 100%;

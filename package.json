@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.31",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.343",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^8.5.4",
     "icons": "^1.0.0",
