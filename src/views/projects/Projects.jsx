@@ -26,7 +26,9 @@ const Projects = () => {
                <>
                   <ReactFullpage.Wrapper>
                      <div className="section">
-                        <SectionHome active={true} dataSection={dataProjects}>
+                        <SectionHome active={true} dataSection={dataProjects}
+                           escene="projects"
+                        >
                            <div></div>
                         </SectionHome>
                      </div>

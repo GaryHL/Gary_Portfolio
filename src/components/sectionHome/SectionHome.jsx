@@ -15,13 +15,13 @@ import {
    ContainerImage,
 } from "./styledSectionHome";
 
-const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, escene}) => {
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, escene }) => {
 
    const urlsSpline = {
       cube: "https://prod.spline.design/OmmIgfZAP1CRCLhO/scene.splinecode",
-      projects:"https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode",
-      about:"https://prod.spline.design/H2hNRbSeoCNYpfhE/scene.splinecode",
-      contact:"https://prod.spline.design/x-BWFFjCHOkM69s7/scene.splinecode",
+      projects: "https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode",
+      about: "https://prod.spline.design/H2hNRbSeoCNYpfhE/scene.splinecode",
+      contact: "https://prod.spline.design/x-BWFFjCHOkM69s7/scene.splinecode",
    }
 
    const esceneSpline = urlsSpline[escene];
@@ -95,6 +95,7 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
 
                <SytledImg>
                   <Spline scene={esceneSpline} />
+                  {/* <Spline scene="https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode" /> */}
                </SytledImg>
             </ContainerImage>
          </StyledPicture>

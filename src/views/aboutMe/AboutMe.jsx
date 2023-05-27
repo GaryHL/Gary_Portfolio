@@ -72,7 +72,9 @@ const AboutMe = () => {
                <>
                   <ReactFullpage.Wrapper>
                      <div className="section">
-                        <SectionHome active={true} dataSection={dataProjects}>
+                        <SectionHome active={true} dataSection={dataProjects}
+                           escene="about"
+                        >
                            <div></div>
                         </SectionHome>
                      </div>
@@ -92,39 +94,7 @@ const AboutMe = () => {
                               </StyledTitle>
                            </div>
                            <StyledContainerInfo style={{ marginTop: "2.5rem" }}>
-                              <ContainerImage
-                                 initial={{ x: 0, scale: 0.95 }}
-                                 transition={{ type: "tween", duration: 1.2 }}
-                                 animate={
-                                    aboutMe
-                                       ? { scale: 1, aspectRatio: "16/9" }
-                                       : { scale: 0.95 }
-                                 }
-                              >
-                                 <StyledSpan
-                                    style={{ backgroundColor: "#e9e9e9" }}
-                                    initial={{ x: 0 }}
-                                    transition={{
-                                       type: "tween",
-                                       duration: 1.2,
-                                    }}
-                                    animate={aboutMe ? { x: "100%" } : { x: 0 }}
-                                 ></StyledSpan>
-                                 <StyledSpan
-                                    style={{ backgroundColor: "black" }}
-                                    initial={{ x: 0 }}
-                                    transition={{
-                                       type: "tween",
-                                       duration: 0.8,
-                                    }}
-                                    animate={aboutMe ? { x: "100%" } : { x: 0 }}
-                                 ></StyledSpan>
-
-                                 <SytledImg
-                                    style={{ aspectRatio: "16/9", width:'100%', opacity:0.5}}
-                                    src={gary_profile}
-                                 />
-                              </ContainerImage>
+                              <div className="containerProfileImage"></div>
                               <div className="containerDetails">
                                  <p>
                                     Soy un desarrollador web fullstack junior,

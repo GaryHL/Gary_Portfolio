@@ -64,23 +64,23 @@ const GridProjects = () => {
       <>
          <ContainerGridProjects>
             <ContainerTabs>
-               <StyledTab
+               {/* <StyledTab
                   style={
                      filterProject === "all"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                     ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                     : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setFilterProject("all")}
                >
                   Todos
-               </StyledTab>
+               </StyledTab> */}
                <StyledTab
                   style={
                      filterProject === "frontEnd"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                        ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                        : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -91,8 +91,8 @@ const GridProjects = () => {
                <StyledTab
                   style={
                      filterProject === "fullStack"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                     ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                     : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

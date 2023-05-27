@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const StyledSection = styled.div`
-  background-color: #e9e9e9;
+  /* background-color: #e9e9e9; */
   width: 90%;
   height: 100vh;
   padding: 0 5%;
@@ -20,19 +20,29 @@ export const StyledSection = styled.div`
 
 export const StyledTitle = styled(motion.h2)`
   font-size: 6rem;
+  font-weight: bold;
+  @media (max-width: 900px) {
+    font-size: 3rem;
+  }
+`;
+export const SpanTitle = styled(motion.span)`
+  font-size: 6rem;
+  font-weight: bold;
   @media (max-width: 900px) {
     font-size: 3rem;
   }
 `;
 
 export const StyledSubtitle = styled(motion.p)`
-  font-weight: 600;
+  font-weight: light;
 `;
 
 export const StyledLine = styled(motion.div)`
   width: 100px;
   height: 3px;
-  background: #333;
+  border-radius: 0.2rem;
+  /* background: #333; */
+  background-color: white;
 `;
 
 export const StyledButton = styled(motion.button)`
@@ -40,14 +50,15 @@ export const StyledButton = styled(motion.button)`
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem;
-  border: 1.1px solid #333;
+  padding: 0.5rem 1rem ;
+  /* border: 1.1px solid #333; */
+  /* background-color: white; */
+  border-radius:2rem;
+  border:3px solid white;
+  font-size: 1rem;
   background-color: transparent;
-  &:hover {
-    background-color: black;
-    color: #e9e9e9;
-    transition: ease-in-out 0.3s;
-  }
+  color:white
+
 `;
 
 export const StyledInfo = styled(motion.div)`
@@ -90,7 +101,7 @@ export const ContainerImage = styled(motion.div)`
 export const SytledImg = styled(motion.div)`
 /* height: 100%; */
 aspect-ratio: 1/1;
-/* background-color: black; */
+background-color: red;
 
   @media (min-width: 900px) {
     width: 100%;
