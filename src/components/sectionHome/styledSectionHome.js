@@ -50,15 +50,14 @@ export const StyledButton = styled(motion.button)`
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 0.5rem 1rem ;
+  padding: 0.5rem 1rem;
   /* border: 1.1px solid #333; */
   /* background-color: white; */
-  border-radius:2rem;
-  border:3px solid white;
+  border-radius: 2rem;
+  border: 3px solid white;
   font-size: 1rem;
   background-color: transparent;
-  color:white
-
+  color: white;
 `;
 
 export const StyledInfo = styled(motion.div)`
@@ -82,7 +81,7 @@ export const StyledInfo = styled(motion.div)`
 export const StyledPicture = styled(StyledInfo)`
   /* padding-left: 2rem; */
   /* padding-right: 0rem; */
-  width:calc(100% - 10%);
+  width: calc(100% - 10%);
   position: absolute;
   position: relative;
   z-index: 2;
@@ -99,10 +98,9 @@ export const ContainerImage = styled(motion.div)`
 `;
 
 export const SytledImg = styled(motion.div)`
-/* height: 100%; */
-aspect-ratio: 1/1;
-background-color: red;
-
+  /* height: 100%; */
+  overflow: hidden;
+  aspect-ratio: 1/1;
   @media (min-width: 900px) {
     width: 100%;
     max-width: 550px;

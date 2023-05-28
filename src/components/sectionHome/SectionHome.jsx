@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import Spline from '@splinetool/react-spline';
-
-import { motion } from "framer-motion";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import hoverEffect from 'hover-effect';
 import {
    StyledInfo,
    StyledSection,
@@ -11,9 +9,9 @@ import {
    StyledButton,
    StyledSubtitle,
    SytledImg,
-   StyledSpan,
    ContainerImage,
 } from "./styledSectionHome";
+import AppContext from "../../context/AppContext";
 
 const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, escene }) => {
 
@@ -24,7 +22,38 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
       contact: "https://prod.spline.design/x-BWFFjCHOkM69s7/scene.splinecode",
    }
 
+   const { setIsHover } = useContext(AppContext)
+
    const esceneSpline = urlsSpline[escene];
+
+   const item_image_class = deleteSpacesMin(dataSection.title);
+   const [load, setLoad] = useState(false)
+
+   function deleteSpacesMin(texto) {
+      const textoSinEspacios = texto.replace(/\s/g, '');
+      const textoEnMinusculas = textoSinEspacios.toLowerCase();
+      return textoEnMinusculas.slice(0, 3);
+   }
+   const myElementRef = useRef(null);
+
+   useEffect(() => {
+
+      const myElementContainer = myElementRef.current;
+      const image = new hoverEffect({
+         parent: myElementContainer,
+         intensity: 0.5,
+         image1: dataSection.image1,
+         image2: dataSection.image2,
+         displacementImage: 'https://images.unsplash.com/photo-1606662995669-4545c4459623?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+      })
+      console.log("se ejecutó")
+      setLoad(true)
+   }, [])
+
+
+
+
+
 
    return (
       <StyledSection rowReverse={rowReverse}>
@@ -55,7 +84,16 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
             </StyledSubtitle>
             {withButton ? (
                <StyledButton
-                  onClick={setFormActive ? () => setFormActive(true) : dataSection.cta}
+                  onHoverStart={() => setIsHover(true)}
+                  onHoverEnd={() => setIsHover(false)}
+                  onClick={() => {
+                     if (setFormActive) {
+                        setFormActive(true);
+                     } else {
+                        dataSection.cta();
+                     }
+                     setIsHover(false);
+                  }}
                   whileHover={{
                      scale: 1.03,
                      x: 5,
@@ -93,8 +131,8 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
                   animate={active ? { x: "100%" } : { x: 0 }}
                ></StyledSpan> */}
 
-               <SytledImg>
-                  <Spline scene={esceneSpline} />
+               <SytledImg ref={myElementRef}>
+                  {/* <Spline scene={esceneSpline} /> */}
                   {/* <Spline scene="https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode" /> */}
                </SytledImg>
             </ContainerImage>
