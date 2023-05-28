@@ -18,6 +18,13 @@ export const StyledNav = styled.nav`
       transition: 1.5s ease-in-out;
    } */
   user-select: none;
+  background: rgba(0, 0, 0, 0.47);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 0px;
+  border-bottom: 1px;
   color: white;
 `;
 
@@ -65,10 +72,9 @@ export const ContainerMenu = styled(motion.div)`
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border:0px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 0px;
   border-bottom: 1px;
-
 `;
 
 export const ContianerLinksMenu = styled(motion.div)`
@@ -76,7 +82,13 @@ export const ContianerLinksMenu = styled(motion.div)`
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+
   > span {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      transition: 0.3s ease-in-out;
+      scale: 1.1;
+    }
     /* height: 2.5rem; */
     cursor: pointer;
     /* overflow: scroll;

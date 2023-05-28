@@ -101,6 +101,10 @@ export const SytledImg = styled(motion.div)`
   /* height: 100%; */
   overflow: hidden;
   aspect-ratio: 1/1;
+  filter: brightness(0.6);
+  filter: contrast(1.3);
+  background-url: url(http://api.thumbr.it/whitenoise-361x370.png?);
+
   @media (min-width: 900px) {
     width: 100%;
     max-width: 550px;

@@ -4,9 +4,11 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
     const [isHover, setIsHover] = useState(false);
+    const [loadFirstPage, setLoadFirstPage] = useState(false)
 
     const contextData = {
-        isHover, setIsHover
+        isHover, setIsHover,
+        loadFirstPage,setLoadFirstPage,
     };
 
     return (

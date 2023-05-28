@@ -47,7 +47,6 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
          displacementImage: 'https://images.unsplash.com/photo-1606662995669-4545c4459623?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
       })
       console.log("se ejecutó")
-      setLoad(true)
    }, [])
 
 
@@ -60,24 +59,24 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
          <StyledInfo>
             <StyledTitle
                initial={{ x: "-100%" }}
-               transition={{ type: "tween", duration: 0.8 }}
+               transition={{ type: "spring", duration: 1.1 }}
                animate={active ? { x: 0 } : { x: "-100%" }}
             >
                {dataSection.title}
             </StyledTitle>
             <StyledLine
                initial={{ x: -100 }}
-               transition={{ type: "tween", duration: 0.9 }}
+               transition={{ type: "spring", duration: 1.2 }}
                animate={active ? { x: 0 } : { x: -100 }}
             ></StyledLine>
             <StyledLine
                initial={{ x: -100 }}
-               transition={{ type: "tween", duration: 1.2 }}
+               transition={{ type: "spring", duration: 1.5 }}
                animate={active ? { x: 50 } : { x: -100 }}
             />
             <StyledSubtitle
                initial={{ x: "-300px" }}
-               transition={{ type: "tween", duration: 1 }}
+               transition={{ type: "spring", duration: 1.2 }}
                animate={active ? { x: 0 } : { x: "-300px" }}
             >
                {dataSection.subtitle}
@@ -103,7 +102,7 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
                   initial={{ x: "-300px" }}
                   animate={
                      active
-                        ? { x: 0, transition: { type: "tween", duration: 1.2 } }
+                        ? { x: 0, transition: { type: "spring", duration: 1.5 } }
                         : { x: "-300px" }
                   }
                >
@@ -131,7 +130,14 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
                   animate={active ? { x: "100%" } : { x: 0 }}
                ></StyledSpan> */}
 
-               <SytledImg ref={myElementRef}>
+               <SytledImg ref={myElementRef}
+
+                  initial={{ scale: 0.9, rotate:3.5, opacity:0.}}
+                  animate={active
+                     ? { scale: 1,rotate:0, opacity:1 }
+                     : { scale: 0.8,rotate:3.5,  opacity:0.}}
+                  transition={{ type: "spring", duration: 1.5 }}
+               >
                   {/* <Spline scene={esceneSpline} /> */}
                   {/* <Spline scene="https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode" /> */}
                </SytledImg>

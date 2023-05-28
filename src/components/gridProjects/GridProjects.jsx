@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
    ContainerGridProjects,
    ContainerProjects,
@@ -12,8 +12,11 @@ import imgYoutube from '../../assets/youtube-logo.png'
 import rarebooks from '../../assets/rarebooks.png'
 import movieapp from '../../assets/movieapp.png'
 import portfolio from '../../assets/portfolio.png'
+import AppContext from "../../context/AppContext";
 
 const GridProjects = () => {
+
+   const { setIsHover } = useContext(AppContext)
    const [array, setArray] = useState([
       {
          "title": "Youtube Clone",
@@ -77,6 +80,9 @@ const GridProjects = () => {
                   Todos
                </StyledTab> */}
                <StyledTab
+               onHoverStart={() => setIsHover(true)}
+               onHoverEnd={() => setIsHover(false)}
+               
                   style={
                      filterProject === "frontEnd"
                         ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
@@ -89,6 +95,8 @@ const GridProjects = () => {
                   Front - End
                </StyledTab>
                <StyledTab
+               onHoverStart={() => setIsHover(true)}
+               onHoverEnd={() => setIsHover(false)}
                   style={
                      filterProject === "fullStack"
                      ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }

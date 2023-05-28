@@ -32,19 +32,24 @@ export const StyledContainerInfo = styled(motion.div)`
     border-radius: 1rem;
     width: 100%;
     aspect-ratio: 16/9;
+    overflow: hidden;
+    @media (max-width:700px) {
+      display: none;
+    }
   }
   .containerDetails {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    line-height: 1.4rem;
+    gap: 0.5rem;
+    font-weight: 200;
+    line-height: 1.5rem;
     > p {
       font-size: 1.2rem;
     }
     padding-left: 2rem;
     @media (max-width: 900px) {
       padding-left: 0rem;
-      padding-top: 2rem;
+      /* padding-top: 2rem; */
 
       > p {
         font-size: 1rem;

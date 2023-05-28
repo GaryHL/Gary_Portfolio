@@ -29,13 +29,12 @@ const MouseDot = styled(motion.div)`
 `;
 
 function MouseAnimated() {
-  const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+  const [coordinates, setCoordinates] = useState({ x: window.clientX, y: window.clientY });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       setCoordinates({ x: clientX, y: clientY });
-      console.log(coordinates);
     };
 
     window.addEventListener('mousemove', handleMouseMove);

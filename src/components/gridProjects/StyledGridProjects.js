@@ -16,7 +16,7 @@ export const ContainerTabs = styled.div`
    display: flex;
    width: 100%;
    justify-content: center;
-   padding-top:10vh;
+   margin-top:14vh;
    gap: 1rem;
 `;
 

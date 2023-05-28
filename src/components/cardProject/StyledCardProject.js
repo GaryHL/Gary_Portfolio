@@ -72,16 +72,15 @@ export const ButtonCard = styled(Link)`
   outline: none;
   border: 2px solid white;
   border-radius: 10rem;
-  cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  transition: ease-in-out 0.3s;
   &:hover {
-    background: white;
-    color: black;
+    scale: 1.03;
     transition: ease-in-out 0.3s;
   }
 `;

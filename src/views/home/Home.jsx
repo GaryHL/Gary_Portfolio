@@ -7,6 +7,7 @@ import projectsCover from '../../assets/Projects-cover.png'
 import aboutCover from '../../assets/about-cover.png'
 import contactCover from '../../assets/contact-cover.png'
 import ContactForm from "../../components/contactForm/ContactForm";
+import welcome from '../../assets/imagesSections/welcome.png'
 
 const Home = ({ setFormActive }) => {
    let { page } = useParams();
@@ -102,8 +103,9 @@ const Home = ({ setFormActive }) => {
       picture:
          homeCover,
       pictureName: "Image name",
-      image1:"https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      image2:"https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      image1: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      image2: welcome,
+      // image2: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
    };
 
    const dataProjects = {
@@ -115,8 +117,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: projectsCover,
       pictureName: "Image name",
-      image1:"https://images.unsplash.com/photo-1530435460869-d13625c69bbf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-      image2:"https://images.unsplash.com/photo-1498736297812-3a08021f206f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      image1: "https://th.bing.com/th/id/OIG.ebsHfSdmGPaxGDyQexrQ?pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.BI61L0PA0.w8.0U3tH.j?pid=ImgGn",
    };
 
    const dataAbout = {
@@ -128,8 +130,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: aboutCover,
       pictureName: "Image name",
-      image1:"https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60 ",
-      image2:"https://images.unsplash.com/photo-1498736297812-3a08021f206f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      image1: "https://th.bing.com/th/id/OIG.46NUjcLzBMgVze4IF_dB?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.irri7qeUXUP6uD4uLGzE?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
    };
 
    const dataContact = {
@@ -140,8 +142,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: contactCover,
       pictureName: "Image name",
-      image1:"https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60 ",
-      image2:"https://images.unsplash.com/photo-1498736297812-3a08021f206f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      image1: "https://th.bing.com/th/id/OIG.yCHSGncupHN12S4k1QyT?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.naUXb_jFE7uPxzD4RO18?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
    };
 
 

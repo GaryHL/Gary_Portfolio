@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import AppContext from "../../context/AppContext";
 
 const ContainerFooter = styled.div`
    width: 80%;
@@ -46,14 +47,6 @@ const ContainerFooter = styled.div`
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
 .glow-on-hover:hover:before {
    opacity: 1;
 }
@@ -81,9 +74,11 @@ const ButtonContact = styled(Link)`
 `;
 
 const Footer = () => {
+    const { setIsHover } = useContext(AppContext)
+
    return (
       <ContainerFooter>
-         <Link className="glow-on-hover" to="/home/contact">
+         <Link onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className="glow-on-hover" to="/home/contact">
             Contáctame
          </Link>
       </ContainerFooter>
