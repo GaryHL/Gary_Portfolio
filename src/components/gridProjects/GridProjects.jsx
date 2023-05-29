@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
    ContainerGridProjects,
    ContainerProjects,
@@ -12,8 +12,11 @@ import imgYoutube from '../../assets/youtube-logo.png'
 import rarebooks from '../../assets/rarebooks.png'
 import movieapp from '../../assets/movieapp.png'
 import portfolio from '../../assets/portfolio.png'
+import AppContext from "../../context/AppContext";
 
 const GridProjects = () => {
+
+   const { setIsHover } = useContext(AppContext)
    const [array, setArray] = useState([
       {
          "title": "Youtube Clone",
@@ -64,23 +67,26 @@ const GridProjects = () => {
       <>
          <ContainerGridProjects>
             <ContainerTabs>
-               <StyledTab
+               {/* <StyledTab
                   style={
                      filterProject === "all"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                     ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                     : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setFilterProject("all")}
                >
                   Todos
-               </StyledTab>
+               </StyledTab> */}
                <StyledTab
+               onHoverStart={() => setIsHover(true)}
+               onHoverEnd={() => setIsHover(false)}
+               
                   style={
                      filterProject === "frontEnd"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                        ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                        : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -89,10 +95,12 @@ const GridProjects = () => {
                   Front - End
                </StyledTab>
                <StyledTab
+               onHoverStart={() => setIsHover(true)}
+               onHoverEnd={() => setIsHover(false)}
                   style={
                      filterProject === "fullStack"
-                        ? { backgroundColor: "#222", color: "#e9e9e9", transition: "0.3s ease-in-out" }
-                        : { backgroundColor: "#e9e9e9" }
+                     ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
+                     : { backgroundColor: "transparent" }
                   }
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

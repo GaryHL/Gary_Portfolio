@@ -7,6 +7,7 @@ import projectsCover from '../../assets/Projects-cover.png'
 import aboutCover from '../../assets/about-cover.png'
 import contactCover from '../../assets/contact-cover.png'
 import ContactForm from "../../components/contactForm/ContactForm";
+import welcome from '../../assets/imagesSections/welcome.png'
 
 const Home = ({ setFormActive }) => {
    let { page } = useParams();
@@ -102,6 +103,9 @@ const Home = ({ setFormActive }) => {
       picture:
          homeCover,
       pictureName: "Image name",
+      image1: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      image2: welcome,
+      // image2: "https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
    };
 
    const dataProjects = {
@@ -113,6 +117,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: projectsCover,
       pictureName: "Image name",
+      image1: "https://th.bing.com/th/id/OIG.ebsHfSdmGPaxGDyQexrQ?pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.BI61L0PA0.w8.0U3tH.j?pid=ImgGn",
    };
 
    const dataAbout = {
@@ -124,6 +130,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: aboutCover,
       pictureName: "Image name",
+      image1: "https://th.bing.com/th/id/OIG.46NUjcLzBMgVze4IF_dB?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.irri7qeUXUP6uD4uLGzE?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
    };
 
    const dataContact = {
@@ -134,6 +142,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: contactCover,
       pictureName: "Image name",
+      image1: "https://th.bing.com/th/id/OIG.yCHSGncupHN12S4k1QyT?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image2: "https://th.bing.com/th/id/OIG.naUXb_jFE7uPxzD4RO18?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
    };
 
 
@@ -146,7 +156,6 @@ const Home = ({ setFormActive }) => {
                fullpageApi.moveSectionDown();
                fullpageApi.moveSectionDown();
                setPageInit("listo");
-               console.log(pageInit)
             }
 
             return (
@@ -157,6 +166,8 @@ const Home = ({ setFormActive }) => {
                            <SectionHome
                               active={section1}
                               dataSection={dataHome}
+                              escene={"cube"}
+                              // tip
                            >
                               <div
                                  style={{
@@ -176,6 +187,7 @@ const Home = ({ setFormActive }) => {
                               active={section2}
                               dataSection={dataProjects}
                               withButton={true}
+                              escene={"projects"}
                            >
                               <div
                                  style={{
@@ -194,6 +206,7 @@ const Home = ({ setFormActive }) => {
                               active={section3}
                               dataSection={dataAbout}
                               withButton={true}
+                              escene="about"
                            >
                               <div
                                  style={{
@@ -214,6 +227,8 @@ const Home = ({ setFormActive }) => {
                               dataSection={dataContact}
                               withButton={true}
                               setFormActive={setFormActive}
+                              escene="contact"
+
                            >
                               <div
                                  style={{

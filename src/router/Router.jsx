@@ -5,6 +5,7 @@ import Navbar from "../components/navbar/Navbar";
 import Projects from "../views/projects/Projects";
 import AboutMe from "../views/aboutMe/AboutMe";
 import ContactForm from "../components/contactForm/ContactForm";
+import ChangePageEffect from '../components/chagePageEffect/ChangePageEffect'
 
 const Router = () => {
    const [formActive, setFormActive] = useState()
