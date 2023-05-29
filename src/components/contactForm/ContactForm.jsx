@@ -38,9 +38,10 @@ function ContactForm({ formActive, setFormActive }) {
                 opacity: 1,
                 display: 'flex'
             } : { opacity: 0, display: 'none' }
+
             }>
                 <Form ref={form} onSubmit={sendEmail} className="container_form">
-                    <h1>Contactame</h1>
+                    <h1>Contáctame</h1>
                     <BsXLg onClick={() => setFormActive(!formActive)} className="closeButton" />
                     <input
                         type="text"
@@ -61,7 +62,7 @@ function ContactForm({ formActive, setFormActive }) {
                         placeholder="Tu mensaje"
                         required
                     />
-                    <button type="submit" >Enviar</button>
+                    <button type="submit" className="glow-on-hover" >Enviar</button>
 
                 </Form>
 

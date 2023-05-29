@@ -50,7 +50,10 @@ const GlobalStyles = createGlobalStyle`
     display:none;
   }
   body{
-    background-color:#e9e9e9;
+    font-family: "poppins";
+    color:white;
+    background:black;
+
 }
 `;
 

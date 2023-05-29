@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
    ButtonCard,
    StyledCardButtons,
@@ -8,8 +8,12 @@ import {
 } from "./StyledCardProject";
 import { Link } from "react-router-dom";
 import { StyledButton } from "../sectionHome/styledSectionHome";
+import AppContext from "../../context/AppContext";
 
 const CardProject = ({ project }) => {
+
+   const { setIsHover } = useContext(AppContext)
+
    const [cardHover, setCardHover] = useState(false);
 
    const openWindow = (url) => {
@@ -22,7 +26,7 @@ const CardProject = ({ project }) => {
          onMouseLeave={() => setCardHover(false)}
          layout
          initial={{ opacity: 0 }}
-         whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+         whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
          animate={{ opacity: 1 }}
          transition={{ duration: 0.3 }}
          exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
@@ -31,22 +35,22 @@ const CardProject = ({ project }) => {
             onClick={() => openWindow(project.link)}
          />
          <StyledDetailsCard>
-            <h4 style={{fontSize:'1.2rem', fontWeight:'600'}}>{project.title}</h4>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: '600' }}>{project.title}</h4>
             <p>{project.description}</p>
             <StyledCardButtons>
                <ButtonCard
+                  onMouseOver={() => setIsHover(true)}
+                  onMouseOut={() => setIsHover(false)}
                   to=""
-                  whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
-                  whileTap={{ scale: 0.98 }}
                   onClick={() => openWindow(project.link_repository)}
                >
                   Repositorio
                </ButtonCard>
                <ButtonCard
                   to=""
-                  whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
-                  whileTap={{ scale: 0.98 }}
                   onClick={() => openWindow(project.link)}
+                  onMouseOver={() => setIsHover(true)}
+                  onMouseOut={() => setIsHover(false)}
                >
                   Despliege
                </ButtonCard>
