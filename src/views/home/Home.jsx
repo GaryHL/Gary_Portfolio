@@ -156,7 +156,6 @@ const Home = ({ setFormActive }) => {
                fullpageApi.moveSectionDown();
                fullpageApi.moveSectionDown();
                setPageInit("listo");
-               console.log(pageInit)
             }
 
             return (
@@ -168,6 +167,7 @@ const Home = ({ setFormActive }) => {
                               active={section1}
                               dataSection={dataHome}
                               escene={"cube"}
+                              // tip
                            >
                               <div
                                  style={{

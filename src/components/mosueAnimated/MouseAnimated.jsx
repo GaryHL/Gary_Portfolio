@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import AppContext from '../../context/AppContext';
 
 const MouseContainer = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   z-index: 900;
   width: ${(props) => (props.isHover ? '3rem' : '2rem')};
   height: ${(props) => (props.isHover ? '3rem' : '2rem')};
@@ -17,7 +17,7 @@ const MouseContainer = styled(motion.div)`
   translateY: ${(props) => (props.isHover ? '-1.5rem' : '-1rem')};
 
   @media (max-width: 768px) {
-    display:none;
+    display:none !important;
   }
 `;
 

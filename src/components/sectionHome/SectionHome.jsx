@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
+import {motion} from 'framer-motion'
 import hoverEffect from 'hover-effect';
 import {
    StyledInfo,
@@ -13,21 +14,9 @@ import {
 } from "./styledSectionHome";
 import AppContext from "../../context/AppContext";
 
-const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, escene }) => {
-
-   const urlsSpline = {
-      cube: "https://prod.spline.design/OmmIgfZAP1CRCLhO/scene.splinecode",
-      projects: "https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode",
-      about: "https://prod.spline.design/H2hNRbSeoCNYpfhE/scene.splinecode",
-      contact: "https://prod.spline.design/x-BWFFjCHOkM69s7/scene.splinecode",
-   }
+const SectionHome = ({ active, withButton, children, dataSection, rowReverse, setFormActive, tip }) => {
 
    const { setIsHover } = useContext(AppContext)
-
-   const esceneSpline = urlsSpline[escene];
-
-   const item_image_class = deleteSpacesMin(dataSection.title);
-   const [load, setLoad] = useState(false)
 
    function deleteSpacesMin(texto) {
       const textoSinEspacios = texto.replace(/\s/g, '');
@@ -46,7 +35,6 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
          image2: dataSection.image2,
          displacementImage: 'https://images.unsplash.com/photo-1606662995669-4545c4459623?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
       })
-      console.log("se ejecutó")
    }, [])
 
 
@@ -132,12 +120,13 @@ const SectionHome = ({ active, withButton, children, dataSection, rowReverse, se
 
                <SytledImg ref={myElementRef}
 
-                  initial={{ scale: 0.9, rotate:3.5, opacity:0.}}
+                  initial={{ scale: 0.9, rotate: 3.5, opacity: 0. }}
                   animate={active
-                     ? { scale: 1,rotate:0, opacity:1 }
-                     : { scale: 0.8,rotate:3.5,  opacity:0.}}
+                     ? { scale: 1, rotate: 0, opacity: 1 }
+                     : { scale: 0.8, rotate: 3.5, opacity: 0. }}
                   transition={{ type: "spring", duration: 1.5 }}
                >
+                  <motion.div className="tip" animate={tip ? { display: "none" } : {}}>clickme</motion.div>
                   {/* <Spline scene={esceneSpline} /> */}
                   {/* <Spline scene="https://prod.spline.design/9uk0aqEXnpHSt79V/scene.splinecode" /> */}
                </SytledImg>

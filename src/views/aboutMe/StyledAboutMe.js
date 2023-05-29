@@ -66,9 +66,9 @@ export const StyledGridSkills = styled(motion.div)`
   grid-gap: 3rem;
   margin-top: 2rem;
   @media (max-width: 900px) {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     grid-template-columns: 100%;
-    height: 60vh;
+    /* height: 60vh; */
     &::-webkit-scrollbar {
       width: 0.3em; /* Ancho de la barra de desplazamiento */
     }

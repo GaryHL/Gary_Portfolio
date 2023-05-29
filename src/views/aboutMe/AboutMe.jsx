@@ -90,181 +90,194 @@ const AboutMe = () => {
    const myElementRef = useRef(null);
 
    return (
-      <ReactFullpage
-         scrollingSpeed={1000}
-         render={({ state, fullpageApi }) => {
-            return (
-               <>
-                  <ReactFullpage.Wrapper>
-                     <div className="section">
-                        <SectionHome active={true} dataSection={dataAbout}
-                           escene="about"
-                        >
-                           <div></div>
-                        </SectionHome>
-                     </div>
-                     <div className="section">
-                        <ContainerAboutMe>
-                           <div style={{ overflow: "hidden" }}>
-                              <StyledTitle
-                                 initial={{ x: -300 }}
-                                 transition={{ duration: 0.7 }}
-                                 animate={
-                                    aboutMe
-                                       ? { x: 0, scale: 1 }
-                                       : { x: -300, scale: 0.96 }
-                                 }
-                              >
-                                 ¿Quién soy yo?
-                              </StyledTitle>
-                           </div>
-                           <StyledContainerInfo style={{ marginTop: "2.5rem" }}>
-                              <motion.div className="containerProfileImage" ref={myElementRef} initial={{ scale: 0.9, rotate: 3.5, opacity: 0. }}
-                                 animate={aboutMe
-                                    ? { scale: 1, rotate: 0, opacity: 1 }
-                                    : { scale: 0.8, rotate: 3.5, opacity: 0. }}
-                                 transition={{ type: "spring", duration: 1.5 }}></motion.div>
 
-                              <div className="containerDetails">
-                                 <p>
-                                    ¡Hola! Soy Gary, un apasionado desarrollador web Fullstack. Hace dos años, mi interés por el marketing me llevó a sumergirme en la venta de productos como afiliado, creando anuncios en Facebook y Google. Descubrí el valor de la optimización de sitios web y la importancia de brindar una excelente experiencia de usuario.</p>
+      <>
+         <SectionHome active={true} dataSection={dataAbout}
+            escene="about"
+         >
+            <div></div>
+         </SectionHome>
+         <ContainerAboutMe>
+            <div style={{ overflow: "hidden" }}>
+               <StyledTitle
+                  initial={{ x: -300 }}
+                  transition={{ duration: 0.7 }}
+                  animate={
+                     aboutMe
+                        ? { x: 0, scale: 1 }
+                        : { x: -300, scale: 0.96 }
+                  }
+               >
+                  ¿Quién soy yo?
+               </StyledTitle>
+            </div>
+            <StyledContainerInfo style={{ marginTop: "2.5rem" }}>
+               <motion.div className="containerProfileImage" ref={myElementRef} initial={{ scale: 0.9, rotate: 3.5, opacity: 0. }}
+                  animate={aboutMe
+                     ? { scale: 1, rotate: 0, opacity: 1 }
+                     : { scale: 0.8, rotate: 3.5, opacity: 0. }}
+                  transition={{ type: "spring", duration: 1.5 }}></motion.div>
 
-                                 <p>
+               <div className="containerDetails">
+                  <motion.p initial={{ x: -300 }}
+                     transition={{ duration: 0.5 }}
+                     animate={
+                        aboutMe
+                           ? { x: 0, scale: 1 }
+                           : { x: -300, scale: 0.96 }
+                     }>
+                     ¡Hola! Soy Gary, un apasionado desarrollador web Fullstack. Hace dos años, mi interés por el marketing me llevó a sumergirme en la venta de productos como afiliado, creando anuncios en Facebook y Google. Descubrí el valor de la optimización de sitios web y la importancia de brindar una excelente experiencia de usuario.</motion.p>
 
-                                    Admiraba profundamente a los programadores y su capacidad para hacerlo todo, lo cual me inspiró a aprender a programar. Ingresé a Factoría F5 y descubrí una pasión dentro de mí que desconocía.
-                                 </p>
+                  <motion.p initial={{ x: -300 }}
+                     transition={{ duration: 0.8 }}
+                     animate={
+                        aboutMe
+                           ? { x: 0, scale: 1 }
+                           : { x: -300, scale: 0.96 }
+                     }>
 
-                                 <p>
+                     Admiraba profundamente a los programadores y su capacidad para hacerlo todo, lo cual me inspiró a aprender a programar. Ingresé a Factoría F5 y descubrí una pasión dentro de mí que desconocía.
+                  </motion.p>
 
-                                    Desde entonces, no puedo pasar ni dos días sin sumergirme en el código. Resolver problemas y crear soluciones es mi combustible diario.
-                                 </p>
+                  <motion.p initial={{ x: -300 }}
+                     transition={{ duration: 1 }}
+                     animate={
+                        aboutMe
+                           ? { x: 0, scale: 1 }
+                           : { x: -300, scale: 0.96 }
+                     }>
 
-                                 <p>
+                     Desde entonces, no puedo pasar ni dos días sin sumergirme en el código. Resolver problemas y crear soluciones es mi combustible diario.
+                  </motion.p>
 
-                                    Si buscas a alguien apasionado, comprometido y con un hambre insaciable por programar, no dudes en contactarme. Estoy emocionado por enfrentar nuevos desafíos y contribuir con mi entusiasmo y habilidades a proyectos emocionantes.
+                  <motion.p initial={{ x: -300 }}
+                     transition={{ duration: 1.2 }}
+                     animate={
+                        aboutMe
+                           ? { x: 0, scale: 1 }
+                           : { x: -300, scale: 0.96 }
+                     }>
 
-                                    ¡Creemos algo increíble juntos!
-                                 </p>
+                     Si buscas a alguien apasionado, comprometido y con un hambre insaciable por programar, no dudes en contactarme. Estoy emocionado por enfrentar nuevos desafíos y contribuir con mi entusiasmo y habilidades a proyectos emocionantes.
 
-                                 <div
-                                    style={{
-                                       position: "absolute",
-                                       height: "0.1%",
-                                    }}
-                                    ref={divRef1}
-                                    id="aboutme"
-                                 ></div>
-                              </div>
-                           </StyledContainerInfo>
-                        </ContainerAboutMe>
-                     </div>
-                     <div className="section">
-                        <ContainerAboutMe>
-                           <div style={{ overflow: "hidden" }}>
-                              <StyledTitle
-                                 initial={{ x: -300 }}
-                                 transition={{ duration: 0.7 }}
-                                 animate={
-                                    skills
-                                       ? { x: 0, scale: 1 }
-                                       : { x: -300, scale: 0.96 }
-                                 }
-                              >
-                                 Tecnologías
-                              </StyledTitle>
-                           </div>
-                           <StyledGridSkills>
-                              <SkillBar
-                                 skillName="Javascript"
-                                 Icon={SiJavascript}
-                                 percent={75}
-                                 projects={35}
-                                 animate={skills}
-                                 color={BrilliantColours.amarillo}
-                              >
-                                 <div
-                                    style={{
-                                       position: "absolute",
-                                       height: "0.1%",
-                                    }}
-                                    ref={divRef2}
-                                    id="skills"
-                                 ></div>
-                              </SkillBar>
-                              <SkillBar
-                                 skillName="React JS"
-                                 Icon={SiReact}
-                                 percent={70}
-                                 projects={20}
-                                 animate={skills}
-                                 color={BrilliantColours.azul}
-                              />
-                              <SkillBar
-                                 skillName="Styled Components"
-                                 Icon={SiStyledcomponents}
-                                 percent={65}
-                                 projects={10}
-                                 animate={skills}
-                                 color={BrilliantColours.violeta}
-                              />
-                              <SkillBar
-                                 skillName="Sass"
-                                 Icon={SiSass}
-                                 percent={90}
-                                 projects={13}
-                                 animate={skills}
-                                 color={BrilliantColours.rosa}
-                              />
-                              <SkillBar
-                                 skillName="Laravel"
-                                 Icon={SiLaravel}
-                                 percent={60}
-                                 projects={8}
-                                 animate={skills}
-                                 color={BrilliantColours.carmesí}
-                              />
-                              <SkillBar
-                                 skillName="Php"
-                                 Icon={SiPhp}
-                                 percent={45}
-                                 projects={10}
-                                 animate={skills}
-                                 color={BrilliantColours.zafiro}
-                              />
-                              <SkillBar
-                                 skillName="Tailwind"
-                                 Icon={SiTailwindcss}
-                                 percent={85}
-                                 projects={8}
-                                 animate={skills}
-                                 color={BrilliantColours.aguamarina}
-                              />
-                              <SkillBar
-                                 skillName="Typescript"
-                                 Icon={SiTypescript}
-                                 percent={69}
-                                 projects={7}
-                                 animate={skills}
-                                 color={BrilliantColours.celeste}
-                              />
-                              <SkillBar
-                                 skillName="Git"
-                                 Icon={SiGit}
-                                 percent={80}
-                                 projects={40}
-                                 animate={skills}
-                                 color={BrilliantColours.mandarina}
-                              />
-                           </StyledGridSkills>
-                           <Footer />
-                        </ContainerAboutMe>
-                     </div>
-                  </ReactFullpage.Wrapper >
-                  <ScrollToTop />
-               </>
-            );
-         }}
-      />
+                     ¡Creemos algo increíble juntos!
+                  </motion.p>
+
+                  <div
+                     style={{
+                        position: "absolute",
+                        height: "0.1%",
+                     }}
+                     ref={divRef1}
+                     id="aboutme"
+                  ></div>
+               </div>
+            </StyledContainerInfo>
+         </ContainerAboutMe>
+         <ContainerAboutMe>
+            <div style={{ overflow: "hidden" }}>
+               <StyledTitle
+                  initial={{ x: -300 }}
+                  transition={{ duration: 0.7 }}
+                  animate={
+                     skills
+                        ? { x: 0, scale: 1 }
+                        : { x: -300, scale: 0.96 }
+                  }
+               >
+                  Tecnologías
+               </StyledTitle>
+            </div>
+            <StyledGridSkills>
+               <SkillBar
+                  skillName="Javascript"
+                  Icon={SiJavascript}
+                  percent={75}
+                  projects={35}
+                  animate={skills}
+                  color={BrilliantColours.amarillo}
+               >
+                  <div
+                     style={{
+                        position: "absolute",
+                        height: "0.1%",
+                     }}
+                     ref={divRef2}
+                     id="skills"
+                  ></div>
+               </SkillBar>
+               <SkillBar
+                  skillName="React JS"
+                  Icon={SiReact}
+                  percent={70}
+                  projects={20}
+                  animate={skills}
+                  color={BrilliantColours.azul}
+               />
+               <SkillBar
+                  skillName="Styled Components"
+                  Icon={SiStyledcomponents}
+                  percent={65}
+                  projects={10}
+                  animate={skills}
+                  color={BrilliantColours.violeta}
+               />
+               <SkillBar
+                  skillName="Sass"
+                  Icon={SiSass}
+                  percent={90}
+                  projects={13}
+                  animate={skills}
+                  color={BrilliantColours.rosa}
+               />
+               <SkillBar
+                  skillName="Laravel"
+                  Icon={SiLaravel}
+                  percent={60}
+                  projects={8}
+                  animate={skills}
+                  color={BrilliantColours.carmesí}
+               />
+               <SkillBar
+                  skillName="Php"
+                  Icon={SiPhp}
+                  percent={45}
+                  projects={10}
+                  animate={skills}
+                  color={BrilliantColours.zafiro}
+               />
+               <SkillBar
+                  skillName="Tailwind"
+                  Icon={SiTailwindcss}
+                  percent={85}
+                  projects={8}
+                  animate={skills}
+                  color={BrilliantColours.aguamarina}
+               />
+               <SkillBar
+                  skillName="Typescript"
+                  Icon={SiTypescript}
+                  percent={69}
+                  projects={7}
+                  animate={skills}
+                  color={BrilliantColours.celeste}
+               />
+               <SkillBar
+                  skillName="Git"
+                  Icon={SiGit}
+                  percent={80}
+                  projects={40}
+                  animate={skills}
+                  color={BrilliantColours.mandarina}
+               />
+            </StyledGridSkills>
+            <Footer />
+         </ContainerAboutMe>
+         <ScrollToTop />
+      </>
+
+
+
    );
 };
 
