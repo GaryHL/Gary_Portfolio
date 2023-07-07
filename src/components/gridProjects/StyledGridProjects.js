@@ -36,7 +36,7 @@ export const ContainerProjects = styled(motion.div)`
 display:flex;
 flex-wrap:wrap;
 justify-content:space-around;
-gap:1rem;
+gap:2rem;
 margin:5vh 0;
 width:100%;
 
