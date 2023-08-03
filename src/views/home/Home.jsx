@@ -14,11 +14,40 @@ const Home = ({ setFormActive }) => {
 
    const [pageInit, setPageInit] = useState(null);
 
-
+   async function postViews() {
+      console.log("post ")
+      const currentDate = new Date();
+      
+      const url = "https://648041e5f061e6ec4d48e9f6.mockapi.io/api/Views";
+      const requestData = {
+         "view":"Nueva visita",
+         "date":currentDate,
+         "id":"1"
+      };
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(requestData)
+        });
+        if (!response.ok) {
+          throw new Error("Error en la solicitud POST");
+        }
+        const data = await response.json();
+    
+      } catch (error) {
+      }
+    }
 
    useEffect(() => {
       setPageInit(page);
    }, [page]);
+
+   useEffect(() =>{
+      postViews()
+   },[])
 
    const navigate = useNavigate();
    //estados iniciales de cada vista
@@ -145,6 +174,7 @@ const Home = ({ setFormActive }) => {
       image1: "https://th.bing.com/th/id/OIG.yCHSGncupHN12S4k1QyT?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
       image2: "https://th.bing.com/th/id/OIG.naUXb_jFE7uPxzD4RO18?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
    };
+   
 
 
    return (

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ export const StyledContainerCard = styled(motion.div)`
   max-width: 340px;
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   background-color: #111;
@@ -84,3 +85,31 @@ export const ButtonCard = styled(Link)`
     transition: ease-in-out 0.3s;
   }
 `;
+const rotateAnimation = keyframes`
+  0% {
+    border-color: #547E76;
+  }
+  50% {
+    border-color: #a3b2c7;
+  }
+  100% {
+    border-color: #4E84D5;
+  }
+`;
+
+export const Price = styled.div`
+  position: absolute;
+  text-align: center;
+  top: 0;
+  padding:0.8rem 0.8rem;
+  right: 0;
+  font-weight: bold;
+  border-radius:0 8px 0px 10px ;
+  /* border: 3px solid; */
+  /* background: linear-gradient(45deg, #547e762b, #a3b2c737, #4e84d541); */
+  background: linear-gradient(45deg, #2c3e50,#abb7c0);
+  background-size: 200% 200%;
+  animation: ${rotateAnimation} 6s linear infinite;
+  backdrop-filter: blur(8px);
+`;
+

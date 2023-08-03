@@ -11,13 +11,23 @@ import Footer from "../footer/Footer";
 import imgYoutube from '../../assets/youtube-logo.png'
 import rarebooks from '../../assets/rarebooks.png'
 import movieapp from '../../assets/movieapp.png'
-import portfolio from '../../assets/portfolio.png'
+import portfolio from '../../assets/imagesSections/portfolio.jpg'
 import AppContext from "../../context/AppContext";
+import extia from '../../assets/imagesSections/extia_hub.jpg'
 
 const GridProjects = () => {
 
    const { setIsHover } = useContext(AppContext)
    const [array, setArray] = useState([
+      {
+         "title": "Extia Events Hub",
+         "image_path":extia,
+         "link": "https://extiaevents.garylima.online/",
+         "description": "Plataforma multilingue de eventos sostenibles para que las personas que vienen fuera de barcelona puedan hacer sus primeros contactos",
+         "link_repository": "https://github.com/Extia-Events-Hub",
+         "type": "fullStack",
+         "finalist":"true"
+      },
       {
          "title": "Youtube Clone",
          "image_path": imgYoutube,
@@ -50,8 +60,9 @@ const GridProjects = () => {
          "link_repository": "https://github.com/GaryHL/Gary_Portfolio.git",
          "type": "frontEnd"
       }
+      
    ]);
-   const [filterProject, setFilterProject] = useState("fullStack");
+   const [filterProject, setFilterProject] = useState("all");
 
    useEffect(() => {
       if (filterProject === "all") {
@@ -67,7 +78,7 @@ const GridProjects = () => {
       <>
          <ContainerGridProjects>
             <ContainerTabs>
-               {/* <StyledTab
+               <StyledTab
                   style={
                      filterProject === "all"
                      ? { backgroundColor: "white", color: "black", transition: "0.3s ease-in-out" }
@@ -78,7 +89,7 @@ const GridProjects = () => {
                   onClick={() => setFilterProject("all")}
                >
                   Todos
-               </StyledTab> */}
+               </StyledTab>
                <StyledTab
                onHoverStart={() => setIsHover(true)}
                onHoverEnd={() => setIsHover(false)}
@@ -92,7 +103,7 @@ const GridProjects = () => {
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setFilterProject("frontEnd")}
                >
-                  Front - End
+                  Frontend
                </StyledTab>
                <StyledTab
                onHoverStart={() => setIsHover(true)}
@@ -106,7 +117,7 @@ const GridProjects = () => {
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setFilterProject("fullStack")}
                >
-                  Full - stack
+                  Fullstack
                </StyledTab>
             </ContainerTabs>
             <ContainerProjects layout>
