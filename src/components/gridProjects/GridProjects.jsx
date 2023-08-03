@@ -22,7 +22,7 @@ const GridProjects = () => {
       {
          "title": "Extia Events Hub",
          "image_path":extia,
-         "link": "https://extia-events-hub-client-nine.vercel.app/",
+         "link": "https://extiaevents.garylima.online/",
          "description": "Plataforma multilingue de eventos sostenibles para que las personas que vienen fuera de barcelona puedan hacer sus primeros contactos",
          "link_repository": "https://github.com/Extia-Events-Hub",
          "type": "fullStack",
