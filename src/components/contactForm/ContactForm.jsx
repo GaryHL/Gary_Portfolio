@@ -21,7 +21,7 @@ function ContactForm({ formActive, setFormActive }) {
             .then(
                 (result) => {
                     console.log(result.text);
-                    swal("Perfecto, tu mensaje se a enviado con éxito!", "Gracias por tu tiempo, te reponderé lo más pronto posible.", "success");
+                    swal("Perfecto, recibí tu mensaje!", "Gracias por tu tiempo, te reponderé lo más pronto posible.", "success");
 
                     setFormActive(!formActive)
                 },

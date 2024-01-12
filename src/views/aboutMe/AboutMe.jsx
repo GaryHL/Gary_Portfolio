@@ -13,7 +13,9 @@ import {
    SiTypescript,
    SiSass,
    SiTailwindcss,
-   SiGit
+   SiGit,
+   SiNextdotjs,
+   SiNodedotjs 
 } from "react-icons/si";
 import {
    ContainerAboutMe,
@@ -44,8 +46,8 @@ const AboutMe = () => {
       },
       picture: aboutCover,
       pictureName: "Image name",
-      image1: "https://th.bing.com/th/id/OIG.46NUjcLzBMgVze4IF_dB?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
-      image2: "https://th.bing.com/th/id/OIG.irri7qeUXUP6uD4uLGzE?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image1: "https://i.imgur.com/EMWKwIX.jpg",
+      image2: "https://i.imgur.com/wADj1Nv.jpg",
    };
 
    const divRef1 = useRef(null);
@@ -215,20 +217,20 @@ const AboutMe = () => {
                   color={BrilliantColours.azul}
                />
                <SkillBar
-                  skillName="Styled Components"
-                  Icon={SiStyledcomponents}
+                  skillName="NodeJS"
+                  Icon={SiNodedotjs}
                   percent={65}
-                  projects={10}
+                  projects={6}
                   animate={skills}
-                  color={BrilliantColours.violeta}
+                  color={BrilliantColours.jade}
                />
                <SkillBar
-                  skillName="Sass"
-                  Icon={SiSass}
+                  skillName="Nextjs"
+                  Icon={SiNextdotjs }
                   percent={90}
                   projects={13}
                   animate={skills}
-                  color={BrilliantColours.rosa}
+                  color={BrilliantColours.perla}
                />
                <SkillBar
                   skillName="Laravel"

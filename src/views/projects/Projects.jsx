@@ -17,8 +17,8 @@ const Projects = () => {
       },
       picture: "",
       pictureName: "Image name",
-      image1: "https://th.bing.com/th/id/OIG.BI61L0PA0.w8.0U3tH.j?pid=ImgGn",
-      image2: "https://th.bing.com/th/id/OIG.ebsHfSdmGPaxGDyQexrQ?pid=ImgGn",
+      image1: "https://i.imgur.com/O3jdTxy.jpg",
+      image2: "https://i.imgur.com/VKeIbTG.jpg",
    };
 
    return (

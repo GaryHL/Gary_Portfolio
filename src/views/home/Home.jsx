@@ -117,8 +117,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: projectsCover,
       pictureName: "Image name",
-      image1: "https://th.bing.com/th/id/OIG.ebsHfSdmGPaxGDyQexrQ?pid=ImgGn",
-      image2: "https://th.bing.com/th/id/OIG.BI61L0PA0.w8.0U3tH.j?pid=ImgGn",
+      image1: "https://i.imgur.com/O3jdTxy.jpg",
+      image2: "https://i.imgur.com/VKeIbTG.jpg",
    };
 
    const dataAbout = {
@@ -130,8 +130,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: aboutCover,
       pictureName: "Image name",
-      image1: "https://th.bing.com/th/id/OIG.46NUjcLzBMgVze4IF_dB?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
-      image2: "https://th.bing.com/th/id/OIG.irri7qeUXUP6uD4uLGzE?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image1: "https://i.imgur.com/EMWKwIX.jpg",
+      image2: "https://i.imgur.com/wADj1Nv.jpg",
    };
 
    const dataContact = {
@@ -142,8 +142,8 @@ const Home = ({ setFormActive }) => {
       },
       picture: contactCover,
       pictureName: "Image name",
-      image1: "https://th.bing.com/th/id/OIG.yCHSGncupHN12S4k1QyT?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
-      image2: "https://th.bing.com/th/id/OIG.naUXb_jFE7uPxzD4RO18?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn",
+      image1: "https://i.imgur.com/WObfJCz.jpg",
+      image2: "https://i.imgur.com/DZFPdqI.jpg",
    };
 
 
